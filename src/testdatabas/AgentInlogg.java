@@ -11,12 +11,12 @@ import oru.inf.InfException;
  *
  * @author Josef
  */
-public class HuvudFonster extends javax.swing.JFrame {
+public class AgentInlogg extends javax.swing.JFrame {
 
     private InfDB idb;
     
 
-    public HuvudFonster(InfDB idb) {
+    public AgentInlogg(InfDB idb) {
         initComponents();
         
         this.idb = idb;
@@ -136,7 +136,7 @@ public class HuvudFonster extends javax.swing.JFrame {
 
             if (namn.equals(svarNamn) && Losenord.equals(svarLosenord)) {
 
-             new Inloggad().setVisible(true);
+             new Inloggad(idb).setVisible(true);
 
 
             } else {

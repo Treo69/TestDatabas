@@ -13,15 +13,12 @@ import oru.inf.InfException;
  */
 public class Inloggad extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Inloggad
-     */
-    public Inloggad() {
+     private InfDB idb;
+    
+    
+    public Inloggad(InfDB idb) {
         initComponents();
-    }
-
-    Inloggad(InfDB idb) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+         this.idb = idb;
     }
 
     /**
