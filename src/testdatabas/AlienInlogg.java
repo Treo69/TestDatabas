@@ -33,6 +33,7 @@ public class AlienInlogg extends javax.swing.JFrame {
         btnLoggaIn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 204, 204));
 
         lblAlien.setText("Inloggning Alien");
 
@@ -94,7 +95,10 @@ public class AlienInlogg extends javax.swing.JFrame {
 
     private void btnLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoggaInActionPerformed
         
-         try {
+         
+        if(Validering.faltHarVarde(txtNamn)) {
+        
+        try {
 
             String namn = txtNamn.getText();
             String Losenord = String.valueOf(passLosenord.getPassword());
@@ -106,7 +110,7 @@ public class AlienInlogg extends javax.swing.JFrame {
 
             if (namn.equals(svarNamn) && Losenord.equals(svarLosenord)) {
 
-             new Inloggad(idb).setVisible(true);
+             new AlienMeny(idb).setVisible(true);
 
 
             } else {
@@ -122,7 +126,7 @@ public class AlienInlogg extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Något gick fel!");
         }
         
-        
+        }
     }//GEN-LAST:event_btnLoggaInActionPerformed
 
 
