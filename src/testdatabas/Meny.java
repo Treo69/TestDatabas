@@ -39,6 +39,11 @@ public class Meny extends javax.swing.JFrame {
         });
 
         btnAlien.setText("Alien");
+        btnAlien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAlienActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -79,6 +84,14 @@ public class Meny extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_btnAgentActionPerformed
+
+    private void btnAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlienActionPerformed
+
+        
+        new AlienInlogg(idb).setVisible(true);
+        
+        
+    }//GEN-LAST:event_btnAlienActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
