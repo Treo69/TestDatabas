@@ -1,16 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package testdatabas;
 
 import oru.inf.InfDB;
 import oru.inf.InfException;
 
-/**
- *
- * @author Josef
- */
+
 public class AgentMeny extends javax.swing.JFrame {
 
      private InfDB idb;
@@ -43,14 +37,39 @@ public class AgentMeny extends javax.swing.JFrame {
         lblAgentmeny.setText("Meny för agenter");
 
         btnAndraLosenord.setText("Ändra mitt lösenord");
+        btnAndraLosenord.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAndraLosenordActionPerformed(evt);
+            }
+        });
 
         btnRegistreraAliens.setText("Nyregistrera aliens");
+        btnRegistreraAliens.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistreraAliensActionPerformed(evt);
+            }
+        });
 
         btnAndraInfo.setText("Ändra information om alien");
+        btnAndraInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAndraInfoActionPerformed(evt);
+            }
+        });
 
         btnInfoAlien.setText("Information om aliens");
+        btnInfoAlien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInfoAlienActionPerformed(evt);
+            }
+        });
 
         btnUtrustning.setText("Registrera utrustning");
+        btnUtrustning.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUtrustningActionPerformed(evt);
+            }
+        });
 
         btnChef.setText("Områdeschef för områdeskontor");
         btnChef.addActionListener(new java.awt.event.ActionListener() {
@@ -103,8 +122,46 @@ public class AgentMeny extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnChefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChefActionPerformed
-        // TODO add your handling code here:
+        
+        new OmradeschefAgent(idb).setVisible(true);
+        super.dispose();
+        
     }//GEN-LAST:event_btnChefActionPerformed
+
+    private void btnRegistreraAliensActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistreraAliensActionPerformed
+        
+        new RegistreraAlien(idb).setVisible(true);
+        super.dispose();
+        
+    }//GEN-LAST:event_btnRegistreraAliensActionPerformed
+
+    private void btnAndraLosenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAndraLosenordActionPerformed
+        
+        new AndraLosenordAgent(idb).setVisible(true);
+        super.dispose();
+        
+    }//GEN-LAST:event_btnAndraLosenordActionPerformed
+
+    private void btnAndraInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAndraInfoActionPerformed
+        
+        new AndraInfoAlien(idb).setVisible(true);
+        super.dispose();
+        
+    }//GEN-LAST:event_btnAndraInfoActionPerformed
+
+    private void btnInfoAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoAlienActionPerformed
+        
+        new InfoAlienMeny(idb).setVisible(true);
+        super.dispose();
+        
+    }//GEN-LAST:event_btnInfoAlienActionPerformed
+
+    private void btnUtrustningActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUtrustningActionPerformed
+        
+        new RegistreraUtrustning(idb).setVisible(true);
+        super.dispose();
+        
+    }//GEN-LAST:event_btnUtrustningActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

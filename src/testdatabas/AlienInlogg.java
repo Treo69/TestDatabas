@@ -111,6 +111,7 @@ public class AlienInlogg extends javax.swing.JFrame {
             if (namn.equals(svarNamn) && Losenord.equals(svarLosenord)) {
 
              new AlienMeny(idb).setVisible(true);
+             super.dispose();
 
 
             } else {

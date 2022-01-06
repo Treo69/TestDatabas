@@ -132,33 +132,33 @@ public class AgentInlogg extends javax.swing.JFrame {
         
         if(Validering.faltHarVarde(txtNamn)) {
         
-        try {
+            try {
 
-            String namn = txtNamn.getText();
-            String Losenord = String.valueOf(passLosenord.getPassword());
-            String fraga1 = "SELECT Namn FROM agent WHERE Losenord=\"" + Losenord + "\"";
-            String fraga2 = "SELECT Losenord FROM agent WHERE Namn=\"" + namn + "\"";
+                String namn = txtNamn.getText();
+                String Losenord = String.valueOf(passLosenord.getPassword());
+                String fraga1 = "SELECT Namn FROM agent WHERE Losenord=\"" + Losenord + "\"";
+                String fraga2 = "SELECT Losenord FROM agent WHERE Namn=\"" + namn + "\"";
 
-            String svarNamn = idb.fetchSingle(fraga1);
-            String svarLosenord = idb.fetchSingle(fraga2);
+                String svarNamn = idb.fetchSingle(fraga1);
+                String svarLosenord = idb.fetchSingle(fraga2);
 
-            if (namn.equals(svarNamn) && Losenord.equals(svarLosenord)) {
+                if (namn.equals(svarNamn) && Losenord.equals(svarLosenord)) {
 
-             new AgentMeny(idb).setVisible(true);
+                    new AgentMeny(idb).setVisible(true);
+                    super.dispose();
 
+                } else {
 
-            } else {
+                    JOptionPane.showMessageDialog(null, "Ange rätt namn och lösenord!");
+                }
 
-                JOptionPane.showMessageDialog(null, "Ange rätt namn och lösenord!");
+            } catch (InfException e) {
+
+                JOptionPane.showMessageDialog(null, "Databasfel!");
+
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Något gick fel!");
             }
-
-        } catch (InfException e) {
-
-            JOptionPane.showMessageDialog(null, "Databasfel!");
-
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Något gick fel!");
-        }
         
         }
         

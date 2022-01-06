@@ -39,6 +39,11 @@ public class AlienMeny extends javax.swing.JFrame {
         });
 
         btnChef.setText("Information om områdeschef");
+        btnChef.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnChefActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -72,8 +77,16 @@ public class AlienMeny extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAndraLosenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAndraLosenordActionPerformed
-        // TODO add your handling code here:
+        
+        new AndraLosenordAlien(idb).setVisible(true);
+        
     }//GEN-LAST:event_btnAndraLosenordActionPerformed
+
+    private void btnChefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChefActionPerformed
+        
+        new InfoChefAlien(idb).setVisible(true);
+        
+    }//GEN-LAST:event_btnChefActionPerformed
 
    
 

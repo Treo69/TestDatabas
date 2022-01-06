@@ -76,26 +76,41 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="&#xc4;ndra mitt l&#xf6;senord"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAndraLosenordActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnRegistreraAliens">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nyregistrera aliens"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistreraAliensActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnAndraInfo">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#xc4;ndra information om alien"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAndraInfoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnInfoAlien">
       <Properties>
         <Property name="text" type="java.lang.String" value="Information om aliens"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInfoAlienActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnUtrustning">
       <Properties>
         <Property name="text" type="java.lang.String" value="Registrera utrustning"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUtrustningActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnChef">
       <Properties>
